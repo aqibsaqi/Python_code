@@ -1,0 +1,218 @@
+OOPs (object oriented programming):
+why need its ?
+because processural/stracture(function) program  come some issues as 
+. code copyPast --if i need same functionality another plase then copy code then past 
+. mantaince issue --large length of code 
+. Reuseability issues 
+All these problems Solve by oops
+class and object
+ is a blueprint of instance object
+ class--->blueprint design
+ object---->instance 
+ 
+ i.e
+ class A :---->bleuprint
+   method1
+    def run()
+   
+   method2
+     def sound()
+     
+ a=A()---->instance
+ a.run()
+ 
+ Constructor:
+ it does not need call its call automaticaly when object is create 
+ it represent as
+ __init__()
+ Types:
+ defualt constractor
+ parameter constractor -->it give when object is created 
+ constractor with defualt value (name="A",age=122)
+ 
+ Syntax
+ class A:
+   def __init__():
+     public var--->self.account_name=account_name
+     private var--->self._account_pin=account_pin 
+     it give controll access 
+ Self---:
+ use inside class and reference of  object and
+ without self cannot access class property and store value in object
+ _____________________________________________
+ types of oops:
+ 
+ 1 inheritance:
+ parent class 
+ child class 
+ child class inherit parent class property
+ i .e
+ class parent:
+ 
+     method1
+     
+ class child(parent):
+  child class gets own propert and parent class propert
+  
+ ____________________________________________________________
+ 
+ polymorphism:
+ one name many form/functionality
+ i.e len()
+ len('python')
+ len([12,2,34,5])
+    ````````````````````````````````
+   class Birds:
+     def sound(self):
+          print('cow cow')
+   class pirat(Birds):
+     def sound(self)
+       print('cow cow')
+b1=Birds()
+b1.sound()
+_________________________________________________
+
+Ecapsulation:
+used to prevent accidental modification of data and to protect the internal state of the object
+In Python, encapsulation is achieved using:
+
+Public members: accessible from anywhere.
+
+Protected members: indicated with a single underscore _, should not be accessed directly (convention).
+
+Private members: indicated with a double underscore __, name mangling is used to make it harder to access them from outside.
+i.e 
+banck account
+account number publicaly show but account balance is hide
+class Person:
+    def __init__(self, name, age):
+        self.name = name              # Public attribute
+        self._age = age               # Protected attribute
+        self.__salary = 50000         # Private attribute
+
+    def display_info(self):
+        print(f"Name: {self.name}")
+        print(f"Age: {self._age}")
+        print(f"Salary: {self.__salary}")
+
+    def update_salary(self, amount):
+        if amount > 0:
+            self.__salary += amount
+        else:
+            print("Invalid amount.")
+
+# Creating object
+p = Person("Alice", 30)
+
+# Accessing public attribute
+print(p.name)
+
+# Accessing protected attribute (not recommended, but possible)
+print(p._age)
+
+# Trying to access private attribute directly (will raise error)
+# print(p.__salary)  #  AttributeError
+
+# Correct way to access private attribute via method
+p.display_info()
+
+# Updating salary via method (encapsulation)
+p.update_salary(5000)
+p.display_info()
+
+
+# If really needed, access private variable (not recommended)
+print(p._Person__salary)  # Name mangling
+
+__________________________________________
+      
+Abstraction:
+Abstraction means hiding the complex implementation details and showing only the necessary features. It helps in managing complexity by letting users interact with simpler interfaces.
+
+In Python, abstraction is implemented using abstract classes and methods, defined in the abc module.
+
+A class that cannot be instantiated and may contain abstract methods (methods without implementation)
+
+Syntax with abc module:
+
+from abc import ABC, abstractmethod
+
+class Animal(ABC):
+    @abstractmethod
+    def make_sound(self):
+        pass  # abstract method
+
+class Dog(Animal):
+    def make_sound(self):
+        return "Woof!"
+
+class Cat(Animal):
+    def make_sound(self):
+        return "Meow!"
+
+# a = Animal()  #  Error: can't instantiate abstract class
+
+d = Dog()
+print(d.make_sound())  #  Woof!
+
+___________________________________________________
+
+comapresion:
+
+| Concept           | What it Means                                             | Main Purpose                  | Keyword / Tool                | Example Summary                               |
+| ----------------- | --------------------------------------------------------- | ----------------------------- | ----------------------------- | --------------------------------------------- |
+| **Encapsulation** | Bundling data and methods, restricting access             | Protect data                  | `_`, `__`, methods            | Hides internal data (e.g., private variables) |
+| **Abstraction**   | Hiding implementation details, showing only functionality | Simplify interface            | `ABC`, `@abstractmethod`      | Abstract class/interface hides complexity     |
+| **Inheritance**   | Child class inherits from parent class                    | Code reuse                    | `class Child(Parent)`         | Dog inherits from Animal                      |
+| **Polymorphism**  | One interface, many forms                                 | Flexibility and extendability | Overriding, same method names | Dog and Cat both implement `make_sound()`     |
+
+
+________________________________________________
+
+Car Analogy for OOP Concepts
+1. 🔐 Encapsulation → Car Controls
+You don't access the engine directly. Instead, you use buttons, steering, pedals.
+
+What is hidden? Complex mechanisms of braking, acceleration.
+
+What is shown? Simple interface (pedals, steering).
+
+🧠 Like private variables & methods — you use safe access only.
+
+python
+Copy
+Edit
+car.start()  # ✅ You don't see how ignition works, just use start()
+2. 🧱 Abstraction → Driving a Car
+You drive a car without knowing how the engine, gears, or fuel injection work.
+
+Focus: Only what the driver needs — steering, brake, gas.
+
+Hidden: Internal complexity (fuel system, electronics).
+
+🧠 Abstract class/interface provides only essentials, implementation is hidden.
+
+3. 🧬 Inheritance → Car Models
+A sports car, SUV, and electric car all inherit basic features of a generic car.
+
+Base class: Car (has wheels, engine, start method)
+
+Child classes: Tesla(Car), BMW(Car)
+
+🧠 Code reuse: Tesla doesn't rewrite "start" method; it inherits from Car.
+
+4. 🔁 Polymorphism → Same Action, Different Results
+Pressing the start button behaves differently for:
+
+Petrol car → starts engine
+
+Electric car → boots battery
+
+Same interface (start()), different behaviors depending on object.
+
+🧠 Method overriding in subclasses for different behavior
+
+      
+ 
+ 
+ 

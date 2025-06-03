@@ -1,0 +1,17 @@
+In Python, chr() and ord() are built-in functions that convert between characters and their Unicode code points:
+ord(char)
+Purpose: Converts a single character to its Unicode integer code.
+
+Input: A single character (string of length 1).
+
+Output: An integer representing the Unicode code point of the character.
+
+chr(code)
+Purpose: Converts a Unicode integer code to its corresponding character.
+
+Input: An integer (valid Unicode code point).
+
+Output: A string of length 1 (the character).
+
+Common Use Case:
+Converting letters to numbers and back (e.g., Caesar cipher or custom encryption).

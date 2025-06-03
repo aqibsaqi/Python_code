@@ -1,0 +1,15 @@
+Bank Account System:
+Create a system where different types of bank accounts (like savings and checking) allow operations like deposit, withdraw, and checking balance — securely and with clean structure.
+
+tep-by-Step: OOP Concepts in Action
+1. Encapsulation
+Protect account balance — don't let users directly change it.
+
+ 2. Abstraction
+User interacts with simple methods like deposit() or withdraw(), not with the internal math or data validation.
+
+ 3. Inheritance
+Different account types (SavingsAccount, CheckingAccount) inherit from a common BankAccount class.
+
+ 4. Polymorphism
+Each account type can have its own version of withdraw()

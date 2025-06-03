@@ -1,0 +1,53 @@
+What is pickle in Python?
+pickle is a Python module used to serialize and deserialize Python objects.
+
+Serialization (pickling): Converting a Python object into a byte stream to save it to a file or send it over a network.
+
+Deserialization (unpickling): Reconstructing the original Python object from the byte stream.
+
+It's commonly used to:
+
+Save machine learning models
+
+Store Python data structures (like lists, dictionaries, objects)
+
+Cache data between runs
+
+Why Use pickle?
+Saves time by avoiding recomputation
+
+Makes it easy to store complex data structures
+
+Helpful in machine learning to save trained models
+When Should You Use It?
+You should use pickle when you:
+
+Want to save a Python object to a file
+
+Need to transfer Python objects across systems or sessions
+
+However, it should not be used to store data securely, as it can execute arbitrary code during loading.	
+
+
+Importing the Module
+import pickle
+Basic Syntax 
+dump()-->serialize
+data = {'name': 'Alice', 'age': 25, 'scores': [90, 85, 88]}
+
+with open('data.pkl', 'wb') as file:
+    pickle.dump(data, file)
+or
+ file=open("file.txt","wb")
+pickle.dump(data,file)
+file.close()
+load()---> deserialize 
+with open('data.pkl', 'rb') as file:
+    loaded_data = pickle.load(file)
+print(loaded_data)
+# Output: {'name': 'Alice', 'age': 25, 'scores': [90, 85, 88]}
+or
+file=open('file.text','rb')
+f=pickle.load('file.text','rb')
+print(f)
+f.close()

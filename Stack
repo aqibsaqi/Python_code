@@ -1,0 +1,24 @@
+Stack :
+>it is linear data stracture
+>store items in the first in /last out base-->LIFO
+>Stack operation:
+.pop()
+.push()
+.peek()
+.display()
+
+push():-
+>insert the element
+>append
+
+pop():-
+>delete the element
+
+
+
+peek():-
+>display last the element
+>slicing
+
+display():-
+>display  the list

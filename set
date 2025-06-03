@@ -1,0 +1,21 @@
+set():
+unique value store
+mutable
+un_order
+un_index
+iteratable
+represent as {}
+ s=(1,2,3,4)
+ 
+ iterate:
+ for x in s:
+   print(x)
+   
+set function:
+ set()  --->any stracture datatype converts in set
+ add()---> add new value in set s.add(45)
+ pop() --->remove any value in set s.pop()
+ remove()--->remove specific value in set s.remove(45)
+ clear()---->remove all value in set s.clear()-->return set()
+ update()---->add new value in set s.update(40)
+ discard()----remove specific value in set s.discard(45)

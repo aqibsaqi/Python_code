@@ -1,0 +1,26 @@
+Random module:
+import random
+random.randint(4,7)
+return integer value
+both include
+
+random.randrange(4,10)
+return nuber
+4 include but 10 not include return--4,9
+l=[1,2,3,4]
+random.choice(l)
+return any item in the l
+
+random.random()
+return float value 0 to 1
+every compile return new float value
+
+shuffle()
+take sequence and return sequence number in  random order
+i.e
+random.shuffle(l)
+
+uniform()
+ return float number between two parameter
+ i.e
+ random.unifor(2,6)--->5.899
